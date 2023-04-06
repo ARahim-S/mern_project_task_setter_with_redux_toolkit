@@ -30,7 +30,14 @@ function Login() {
       navigate("/");
     }
     dispatch(reset());
-  }, [isError, dispatch, user, isSuccess, navigate, message]);
+  }, [user, isError, isSuccess, message, navigate, dispatch]);
+
+  const handleChange = (e) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,13 +47,6 @@ function Login() {
     };
 
     dispatch(login(userData));
-  };
-
-  const handleChange = (e) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.value,
-    }));
   };
 
   if (isLoading) {
@@ -72,6 +72,7 @@ function Login() {
               name="email"
               placeholder="Enter your email address"
               onChange={handleChange}
+              value={email}
             />
           </div>
           <div className="form-group">
@@ -82,6 +83,7 @@ function Login() {
               name="password"
               placeholder="Enter your password"
               onChange={handleChange}
+              value={password}
             />
           </div>
           <div className="form-group">

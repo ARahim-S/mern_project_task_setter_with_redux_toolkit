@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   height: 100vh;
 }
 
@@ -37,10 +37,11 @@ h3 {
 
 .container {
   width: 100%;
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
+  background-color: azure;
 }
 
 .header {
@@ -50,6 +51,7 @@ h3 {
   padding: 20px 0;
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: 60px;
+  background-color: rgb(80, 167, 189);
 }
 
 .header ul {
@@ -68,7 +70,8 @@ h3 {
 }
 
 .header ul li a:hover {
-  color: #777;
+  color: #d32a2a;
+  font-weight: 500;
 }
 
 .header ul li a svg {
@@ -86,20 +89,20 @@ h3 {
   color: #828282;
 }
 
-.goals {
+.tasks {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
-.goal {
+.task {
   background-color: #f4f4f4;
   margin: 10px 0;
   padding: 20px 0 10px;
   position: relative;
 }
 
-.goal .close {
+.task .close {
   position: absolute;
   top: 10px;
   right: 15px;
@@ -137,9 +140,9 @@ h3 {
 
 .btn {
   padding: 10px 20px;
-  border: 1px solid #000;
+  border: 1px solid #000000;
   border-radius: 5px;
-  background: #000;
+  background: #da4444;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
